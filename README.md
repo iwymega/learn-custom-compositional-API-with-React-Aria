@@ -1,3 +1,23 @@
-# Building a custom compositional API with React Aria
-There are countless UI libraries and kits for React that we can use to build our application’s user interface. Some of these libraries provide built-in components with prewritten rendering and behaviors that aren’t easy to customize at lower levels.
-In this article, you will learn how to create a compositional API by extending React Aria’s built-in components to create your own custom components. To follow along with this tutorial, I will assume you can create a React app using Vite and have a basic understanding of React Aria components.
+React + TypeScript + Vite
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+@vitejs/plugin-react uses Babel for Fast Refresh
+@vitejs/plugin-react-swc uses SWC for Fast Refresh
+Expanding the ESLint configuration
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+
+Configure the top-level parserOptions property like this:
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
+Replace plugin:@typescript-eslint/recommended to plugin:@typescript-eslint/recommended-type-checked or plugin:@typescript-eslint/strict-type-checked
+Optionally add plugin:@typescript-eslint/stylistic-type-checked
+Install eslint-plugin-react and add plugin:react/recommended & plugin:react/jsx-runtime to the extends list
